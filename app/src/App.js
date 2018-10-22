@@ -1,13 +1,16 @@
 import React, { Component } from "react";
-import { Menu } from "./components/Menu";
-import { Map } from "./components/Map";
+import TopBar from "./components/TopBar";
+import Settings from "./components/Settings";
+import Grid from "./components/Grid";
+import "../public/stylesheets/App.css";
 
 class App extends Component {
 	render() {
 		return (
 			<div className="container">
-				<Menu />
-				<Map />
+				<TopBar />
+				<Settings />
+				<Grid row={50} column={50} />
 			</div>
 		);
 	}

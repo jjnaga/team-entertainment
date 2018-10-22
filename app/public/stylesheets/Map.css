@@ -1,0 +1,7 @@
+.map {
+	height: 100%;
+	padding: 50px;
+	display: grid;
+	grid-template-columns: repeat(50, 1fr);
+	grid-template-rows: repeat(auto-fit, minmax(2px, 1fr));
+}

@@ -1,0 +1,18 @@
+.Settings {
+	height: 100%;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+}
+
+.Settings > * {
+	margin: 60px;
+	border-radius: 35px;
+}
+
+.Upload {
+	background: #eae6da;
+}
+
+.Options {
+	background: #7f4145;
+}
