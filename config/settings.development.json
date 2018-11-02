@@ -9,5 +9,9 @@
     { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
     { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
+  ],
+
+  "defaultStories": [
+    { "story": "A botch necromancer spell has turned your party into zombies/skeletons. Your mission is to find a way to bring yourself back to life." }
   ]
 }
