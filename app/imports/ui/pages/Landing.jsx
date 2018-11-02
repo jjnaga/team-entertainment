@@ -14,6 +14,12 @@ class Landing extends React.Component {
         </Grid.Row>
 
         <Grid.Row>
+          <Grid.Column width={16}>
+            <h1>Story</h1>
+          </Grid.Column>
+        </Grid.Row>
+
+        <Grid.Row>
           <Grid.Column width={8}>
             <h1>Toolbox</h1>
               <Grid columns={5} celled>
