@@ -14,12 +14,14 @@ class Landing extends React.Component {
         <Grid.Row>
           <Grid.Column width={16}>
             <h1>Map</h1>
+            <Image src="images/Map.png" fluid />
           </Grid.Column>
         </Grid.Row>
 
         <Grid.Row>
           <Grid.Column width={16}>
             <h1>Story</h1>
+            <p>A botch necromancer spell has turned your party into zombies/skeletons. Your mission is to find a way to bring yourself back to life.</p>
           </Grid.Column>
         </Grid.Row>
 
