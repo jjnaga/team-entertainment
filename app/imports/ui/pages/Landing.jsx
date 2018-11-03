@@ -1,5 +1,9 @@
 import React from 'react';
 import { Grid, Image, Button, Checkbox, List } from 'semantic-ui-react';
+import { Meteor } from 'meteor/meteor';
+import { Stories } from '/imports/api/stories/stories';
+import { withTracker } from 'meteor/react-meteor-data';
+import PropTypes from 'prop-types';
 
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
@@ -10,6 +14,14 @@ class Landing extends React.Component {
         <Grid.Row>
           <Grid.Column width={16}>
             <h1>Map</h1>
+            <Image src="images/Map.png" fluid />
+          </Grid.Column>
+        </Grid.Row>
+
+        <Grid.Row>
+          <Grid.Column width={16}>
+            <h1>Story</h1>
+            <p>A botch necromancer spell has turned your party into zombies/skeletons. Your mission is to find a way to bring yourself back to life.</p>
           </Grid.Column>
         </Grid.Row>
 
@@ -55,4 +67,20 @@ class Landing extends React.Component {
   }
 }
 
-export default Landing;
+//export default Landing;
+
+/** Require an array of Stuff documents in the props. */
+Landing.propTypes = {
+  stories: PropTypes.array.isRequired,
+  ready: PropTypes.bool.isRequired,
+};
+
+/** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
+export default withTracker(() => {
+  // Get access to Stuff documents.
+  const subscription = Meteor.subscribe('Stories');
+  return {
+    stories: Stories.find({}).fetch(),
+    ready: subscription.ready(),
+  };
+})(Landing);
