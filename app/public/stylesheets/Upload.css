@@ -1,0 +1,27 @@
+.Upload {
+	display: grid;
+	grid-template-rows: 2fr 1fr;
+	padding: 15px;
+}
+
+.Upload > p {
+	font-size: 13px;
+}
+
+.Toolbox {
+	display: grid;
+	grid-template-rows: 1fr 4fr 1fr;
+}
+
+#tool-box {
+	display: grid;
+	background: #d1b894;
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.upload {
+	border-radius: 15px;
+	background: #3f69aa;
+	color: white;
+	font-size: 30px;
+}

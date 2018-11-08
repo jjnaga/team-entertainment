@@ -1,0 +1,11 @@
+.container {
+	display: grid;
+	grid-template-rows: auto 1fr;
+	grid-template-columns: 1fr 2fr;
+	height: 100vh;
+	background: #485167;
+}
+
+.TopBar {
+	grid-column: span 2;
+}
