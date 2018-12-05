@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import '/client/Map.css';
+import React, {Component} from 'react';
+//import './App.css';
 
 class App extends Component {
 	constructor() {
@@ -184,7 +184,8 @@ class App extends Component {
 
 	render() {
 		return ( <
-			canvas id = 'canvas' >< /canvas>
+			canvas id = 'canvas' > < /canvas>
 		);
 	}
 }
+export default App;
