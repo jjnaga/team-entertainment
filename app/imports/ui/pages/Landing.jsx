@@ -15,7 +15,7 @@ class Landing extends React.Component {
 				<Grid.Row>
 					<Grid.Column width={16}>
 						<h1>Map</h1>
-						<LeafMap className="test" lat={51.505} lon={-0.09} />
+						<LeafMap style={"height"} lat={51.505} lon={-0.09} />
 						{/* <Image src="images/Map.png" fluid /> */}
 					</Grid.Column>
 				</Grid.Row>
