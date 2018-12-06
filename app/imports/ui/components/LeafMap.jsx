@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Map, Marker, Popup, TileLayer } from "react-leaflet";
+/*t*/
 
 const LeafMap = ({ lat, lon }) => {
 	const position = [lat, lon];
