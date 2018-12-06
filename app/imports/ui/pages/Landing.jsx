@@ -6,6 +6,7 @@ import { withTracker } from "meteor/react-meteor-data";
 import PropTypes from "prop-types";
 import LeafMap from "../components/LeafMap";
 import "leaflet/dist/leaflet.css";
+import Map from "../components/Map";
 
 
 /** A simple static component to render some text for the landing page. */
@@ -16,8 +17,7 @@ class Landing extends React.Component {
 				<Grid.Row>
 					<Grid.Column width={16}>
 						<h1>Map</h1>
-						<LeafMap className="test" lat={51.505} lon={-0.09} />
-						{/* <Image src="images/Map.png" fluid /> */}
+						<Map />
 					</Grid.Column>
 				</Grid.Row>
 
