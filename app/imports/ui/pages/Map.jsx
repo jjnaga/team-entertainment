@@ -1,16 +1,11 @@
-import React, { Component } from 'react';
-import '/client/Map.css';
-
 class App extends Component {
 	constructor() {
-		
+
 		var Dungeon = {
 			map: null,
 			map_size: 64,
-			rooms: []
-			, Gene
-		
-			Generate () {
+			rooms: [],
+			Generate() {
 				this.map = [];
 				for (var x = 0; x < this.map_size; x++) {
 					this.map[x] = [];
@@ -142,52 +137,51 @@ class App extends Component {
 
 				return false;
 			}
-		
 
 
-		var Renderer = {
-			canvas: null,
-			ctx: null,
-			size: 512,
-			scale: 0,
-			Initialize: function () {
-				this.canvas = document.getElementById('canvas');
-				this.canvas.width = this.size;
-				this.canvas.height = this.size;
-				this.ctx = canvas.getContext('2d');
-				this.scale = (this.canvas.width / Dungeon.map_size); //scale directly related to tile size
-			}
-			Update () {
-				var floor = new Image(100, 100);
-				var wall = new Image(100, 100);
-				var outside = new Image(100, 100);
-				var ts = 10;
-				floor.src = "https://raw.githubusercontent.com/jjnaga/team-entertainment/master/floor.png";
-				wall.src = "https://freepngimg.com/thumb/star/1-red-star-png-image-thumb.png";
-				outside.src = "https://raw.githubusercontent.com/jjnaga/team-entertainment/master/outside.png";
-				for (var y = 0; y < Dungeon.map_size; y++) {
-					for (var x = 0; x < Dungeon.map_size; x++) {
-						var tile = Dungeon.map[x][y];
-						if (tile == 0) {
-							this.ctx.drawImage(outside, x * this.scale, y * this.scale, ts, ts);
-						} else if (tile == 1) {
-							this.ctx.drawImage(floor, x * this.scale, y * this.scale, ts, ts);
-						} else { /*need floor file*/ }
+			var Renderer = {
+				canvas: null,
+				ctx: null,
+				size: 512,
+				scale: 0,
+				Initialize: function () {
+					this.canvas = document.getElementById('canvas');
+					this.canvas.width = this.size;
+					this.canvas.height = this.size;
+					this.ctx = canvas.getContext('2d');
+					this.scale = (this.canvas.width / Dungeon.map_size); //scale directly related to tile size
+				}
+				Update() {
+					var floor = new Image(100, 100);
+					var wall = new Image(100, 100);
+					var outside = new Image(100, 100);
+					var ts = 10;
+					floor.src = "https://raw.githubusercontent.com/jjnaga/team-entertainment/master/floor.png";
+					wall.src = "https://freepngimg.com/thumb/star/1-red-star-png-image-thumb.png";
+					outside.src = "https://raw.githubusercontent.com/jjnaga/team-entertainment/master/outside.png";
+					for (var y = 0; y < Dungeon.map_size; y++) {
+						for (var x = 0; x < Dungeon.map_size; x++) {
+							var tile = Dungeon.map[x][y];
+							if (tile == 0) {
+								this.ctx.drawImage(outside, x * this.scale, y * this.scale, ts, ts);
+							} else if (tile == 1) {
+								this.ctx.drawImage(floor, x * this.scale, y * this.scale, ts, ts);
+							} else { /*need floor file*/ }
+						}
 					}
 				}
-			}
-		};
+			};
 
-		var Helpers = {
-			GetRandom: function (low, high) {
-				return ~~(Math.random() * (high - low)) + low;
-			}
-		};
-	}
+			var Helpers = {
+				GetRandom: function (low, high) {
+					return ~~(Math.random() * (high - low)) + low;
+				}
+			};
+		}
 
-	render() {
-		return ( <
-			canvas id = 'canvas' >< /canvas>
-		);
+		render() {
+			return ( <
+				canvas id = 'canvas' > < /canvas>
+			);
+		}
 	}
-}
