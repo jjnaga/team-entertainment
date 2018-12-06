@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '/client/Map.css';
 
-class App extends Component {
+export default class Map extends Component {
 	constructor() {
 		var Dungeon = {
 			map: null,

@@ -7,6 +7,7 @@ import PropTypes from "prop-types";
 import LeafMap from "../components/LeafMap";
 import "leaflet/dist/leaflet.css";
 
+
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
 	render() {
