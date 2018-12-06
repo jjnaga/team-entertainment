@@ -3,11 +3,14 @@ import '/client/Map.css';
 
 class App extends Component {
 	constructor() {
+		
 		var Dungeon = {
 			map: null,
 			map_size: 64,
-			rooms: [],
-			Generate: function () {
+			rooms: []
+			, Gene
+		
+			Generate () {
 				this.map = [];
 				for (var x = 0; x < this.map_size; x++) {
 					this.map[x] = [];
@@ -86,8 +89,8 @@ class App extends Component {
 						}
 					}
 				}
-			},
-			FindClosestRoom: function (room) {
+			}
+			FindClosestRoom(room) {
 				var mid = {
 					x: room.x + (room.w / 2),
 					y: room.y + (room.h / 2)
@@ -108,8 +111,8 @@ class App extends Component {
 					}
 				}
 				return closest;
-			},
-			SquashRooms: function () {
+			}
+			SquashRooms() {
 				for (var i = 0; i < 10; i++) {
 					for (var j = 0; j < this.rooms.length; j++) {
 						var room = this.rooms[j];
@@ -129,8 +132,8 @@ class App extends Component {
 						}
 					}
 				}
-			},
-			DoesCollide: function (room, ignore) {
+			}
+			DoesCollide(room, ignore) {
 				for (var i = 0; i < this.rooms.length; i++) {
 					if (i == ignore) continue;
 					var check = this.rooms[i];
@@ -139,7 +142,7 @@ class App extends Component {
 
 				return false;
 			}
-		}
+		
 
 
 		var Renderer = {
@@ -153,8 +156,8 @@ class App extends Component {
 				this.canvas.height = this.size;
 				this.ctx = canvas.getContext('2d');
 				this.scale = (this.canvas.width / Dungeon.map_size); //scale directly related to tile size
-			},
-			Update: function () {
+			}
+			Update () {
 				var floor = new Image(100, 100);
 				var wall = new Image(100, 100);
 				var outside = new Image(100, 100);
