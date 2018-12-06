@@ -160,7 +160,7 @@ class App extends Component {
 				var outside = new Image(100, 100);
 				var ts = 10;
 				floor.src = "https://raw.githubusercontent.com/jjnaga/team-entertainment/master/floor.png";
-				wall.src = "https://freepngimg.com/thumb/star/1-red-star-png-image-thumb.png";
+				wall.src = "";
 				outside.src = "https://raw.githubusercontent.com/jjnaga/team-entertainment/master/outside.png";
 				for (var y = 0; y < Dungeon.map_size; y++) {
 					for (var x = 0; x < Dungeon.map_size; x++) {
@@ -180,6 +180,10 @@ class App extends Component {
 				return ~~(Math.random() * (high - low)) + low;
 			}
 		};
+		
+		Dungeon.Generate();
+		Renderer.Initialize();
+		Renderer.Update(Dungeon.map);
 	}
 
 	render() {
